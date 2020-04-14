@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "c6d47c0d-523a-40ff-8f75-b0312aea0390",
+		"name": "Weather API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Current Weather",
+			"item": [
+				{
+					"name": "Get Current Weather",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "935ea8b3-845d-4cb0-b176-dafc68f91dc2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Check JSON\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.base).to.eql('stations');",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "London"
+								},
+								{
+									"key": "appid",
+									"value": "0f7ce79aa55bf9db11deeeb82f8e49f1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather - No token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "935ea8b3-845d-4cb0-b176-dafc68f91dc2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "London"
+								},
+								{
+									"key": "appid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather - No Location",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "935ea8b3-845d-4cb0-b176-dafc68f91dc2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "0f7ce79aa55bf9db11deeeb82f8e49f1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Weather - Invalid Response",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "935ea8b3-845d-4cb0-b176-dafc68f91dc2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Check JSON\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.weather[0].id).to.eql(100);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "London"
+								},
+								{
+									"key": "appid",
+									"value": "0f7ce79aa55bf9db11deeeb82f8e49f1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
