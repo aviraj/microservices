@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "c6d47c0d-523a-40ff-8f75-b0312aea0390",
-		"name": "Weather API",
+		"name": "WeatherAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
