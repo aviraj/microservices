@@ -34,12 +34,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
-							"protocol": "https",
+							"raw": "{{url}}/data/2.5/weather?q=London&appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
 							"host": [
-								"api",
-								"openweathermap",
-								"org"
+								"{{url}}"
 							],
 							"path": [
 								"data",
@@ -80,12 +77,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=",
-							"protocol": "https",
+							"raw": "{{url}}/data/2.5/weather?q=London&appid=",
 							"host": [
-								"api",
-								"openweathermap",
-								"org"
+								"{{url}}"
 							],
 							"path": [
 								"data",
@@ -126,12 +120,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.openweathermap.org/data/2.5/weather?appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
-							"protocol": "https",
+							"raw": "{{url}}/data/2.5/weather?appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
 							"host": [
-								"api",
-								"openweathermap",
-								"org"
+								"{{url}}"
 							],
 							"path": [
 								"data",
@@ -173,12 +164,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
-							"protocol": "https",
+							"raw": "{{url}}/data/2.5/weather?q=London&appid=0f7ce79aa55bf9db11deeeb82f8e49f1",
 							"host": [
-								"api",
-								"openweathermap",
-								"org"
+								"{{url}}"
 							],
 							"path": [
 								"data",
